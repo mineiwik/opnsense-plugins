@@ -1,0 +1,2 @@
+netbird:/etc/rc.conf.d/netbird
+30-netbird:/usr/local/etc/rc.syshook.d/carp/30-netbird

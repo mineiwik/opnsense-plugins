@@ -1,0 +1,18 @@
+<form>
+    <field>
+        <id>netbird.general.Enabled</id>
+        <label>Enabled</label>
+        <type>checkbox</type>
+        <help>Enable netbird</help>
+    </field>
+    <field>
+        <id>netbird.general.CarpIf</id>
+        <label>CARP Interface</label>
+        <type>dropdown</type>
+    </field>
+    <field>
+        <id>netbird.general.VHID</id>
+        <label>CARP VHID</label>
+        <type>text</type>
+    </field>
+</form>

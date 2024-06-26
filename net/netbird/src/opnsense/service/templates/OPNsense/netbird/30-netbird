@@ -1,0 +1,23 @@
+#!/bin/sh
+{% if helpers.exists('OPNsense.netbird.general.Enabled') and OPNsense.netbird.general.Enabled|default("0") == '1' and helpers.exists('OPNsense.netbird.general.CarpIf') and helpers.exists('OPNsense.netbird.general.CarpIf') != "" %}
+{% from 'OPNsense/Macros/interface.macro' import physical_interface %}
+subsystem=$1
+type=$2
+
+if [ $subsystem != "{{ OPNsense.netbird.general.VHID|default("3") }}@{{ physical_interface(OPNsense.netbird.general.CarpIf) }}" ]
+then
+  exit 0
+fi
+
+if [ $type = "MASTER" ]
+then
+  netbird up
+fi
+
+if [ $type = "BACKUP" ]
+then
+  netbird down
+fi
+{% else %}
+exit 0
+{% endif %}

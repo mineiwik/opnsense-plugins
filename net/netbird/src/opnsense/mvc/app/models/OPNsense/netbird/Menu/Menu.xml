@@ -1,0 +1,5 @@
+<menu>
+    <VPN>
+        <netbird VisibleName="Netbird" cssClass="fa fa-lock fa-fw" url="/ui/netbird"/>
+    </VPN>
+</menu>
